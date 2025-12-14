@@ -46,10 +46,16 @@ class Employee(models.Model):
     surname = models.CharField(max_length=50,
                                verbose_name='Фамилия')
     patronymic = models.CharField(max_length=50,
-                                  verbose_name='Отчество')
+                                  verbose_name='Отчество',
+                                  blank=True,
+                                  null=True)
     position = models.ForeignKey('EmployeePosition',
                                  on_delete=models.PROTECT,
                                  verbose_name='Должность')
+    login = models.CharField(max_length=255,
+                             verbose_name='Логин')
+    password = models.CharField(max_length=1000,
+                                verbose_name='Пароль')
 
     def __str__(self):
         return f'{self.name} {self.surname} {self.patronymic} ({self.position})'
@@ -69,7 +75,8 @@ class EmployeePosition(models.Model):
                             verbose_name='Наименование')
     description = models.TextField(max_length=1000,
                                    null=True,
-                                   verbose_name='Описание')
+                                   verbose_name='Описание',
+                                   blank=True)
     access_level = models.CharField(max_length=2,
                                     choices=AccessLevel,
                                     default=AccessLevel.WORKER,
