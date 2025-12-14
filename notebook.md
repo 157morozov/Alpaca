@@ -21,4 +21,6 @@ python manage.py migrate app
 python manage.py migrate --run-syncdb 
 
 ```
-
+## YT guides
+https://www.youtube.com/watch?v=6K83dgjkQNw
+https://www.youtube.com/watch?v=EVrMbS14FdE&list=PLA0M1Bcd0w8xZA3Kl1fYmOH_MfLpiYMRs&index=8
