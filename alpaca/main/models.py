@@ -88,3 +88,19 @@ class EmployeePosition(models.Model):
     class Meta:
         verbose_name = 'Должность'
         verbose_name_plural = 'Должности'
+
+
+class Test(models.Model):
+    title = models.CharField(max_length=255,
+                             verbose_name='Заголовок')
+    description = models.TextField(max_length=1000,
+                                   verbose_name='Описание',
+                                   blank=True,
+                                   null=True)
+
+    def __str__(self):
+        return f'{self.title}: {self.description}'
+
+    class Meta:
+        verbose_name = 'Тестовая запись'
+        verbose_name_plural = 'Тестовые записи'
