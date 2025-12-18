@@ -78,10 +78,11 @@ class TestAPIView(APIView):
             'content': serializer.data
         })
 
-    def patch(self, request, *args, **kwargs):
-        return Response({
-            'content': 'Patch'
-        })
+    # COM: Useless for now
+    # def patch(self, request, *args, **kwargs):
+    #     return Response({
+    #         'content': 'Patch'
+    #     })
 
 
 class Reports(APIView):

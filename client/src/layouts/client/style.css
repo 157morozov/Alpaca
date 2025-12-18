@@ -1,0 +1,3 @@
+.CUI-main {
+    min-height: calc(100dvh - var(--size-height--CUI-nav));
+}

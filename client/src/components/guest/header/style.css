@@ -1,0 +1,8 @@
+:root {
+    --size-height--GUI-nav: 56px;
+}
+
+.GUI-nav {
+    height: var(--size-height--GUI-nav);
+    backdrop-filter: var(--backdrop-filter--blur-000);
+}
